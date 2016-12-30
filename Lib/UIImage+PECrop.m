@@ -14,6 +14,8 @@
                          croppedToRect:(CGRect)rect
 {
     UIImage *rotatedImage = [self pe_rotatedImageWithtransform:rotation];
+
+    // just crop, image normalization is already done together with rotation
     UIImage *croppedImage = [rotatedImage pe_croppedImageWithRect:rect preferredScale:self.scale];
     
     return croppedImage;
@@ -21,7 +23,7 @@
 
 - (UIImage *)pe_croppedImageWithRect:(CGRect)rect
 {
-    return [self pe_croppedImageWithRect:rect preferredScale:self.scale];
+    return [[self pe_normalizedImage] pe_croppedImageWithRect:rect preferredScale:self.scale];
 }
 
 #pragma mark - private methods and helpers
@@ -58,6 +60,22 @@
     UIGraphicsEndImageContext();
     
     return rotatedImage;
+}
+
+- (UIImage *)pe_normalizedImage
+{
+    if (self.imageOrientation == UIImageOrientationUp) {
+        return self;
+    }
+    
+    CGSize size = self.size;
+    
+    UIGraphicsBeginImageContextWithOptions(size, YES, self.scale);
+    [self drawInRect:CGRectMake(0.0f, 0.0f, size.width, size.height)];
+    UIImage *normalizedImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return normalizedImage;
 }
 
 @end
