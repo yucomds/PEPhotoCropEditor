@@ -61,6 +61,7 @@
 		14BB4F0E174BD7CA00C75F78 /* PECropRectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PECropRectView.m; path = Lib/PECropRectView.m; sourceTree = SOURCE_ROOT; };
 		14BB4F0F174BD7CB00C75F78 /* PEResizeControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PEResizeControl.h; path = Lib/PEResizeControl.h; sourceTree = SOURCE_ROOT; };
 		14BB4F10174BD7CB00C75F78 /* PEResizeControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PEResizeControl.m; path = Lib/PEResizeControl.m; sourceTree = SOURCE_ROOT; };
+		B420217B1FE218FE00E92D38 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		E576407417A7889200111967 /* UIImage+PECrop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+PECrop.m"; path = "Lib/UIImage+PECrop.m"; sourceTree = SOURCE_ROOT; };
 		E576407517A7889200111967 /* UIImage+PECrop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+PECrop.h"; path = "Lib/UIImage+PECrop.h"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -212,6 +213,11 @@
 				CLASSPREFIX = PE;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "kishikawa katsumi";
+				TargetAttributes = {
+					14BB4E85174BC39000C75F78 = {
+						DevelopmentTeam = AT993V467J;
+					};
+				};
 			};
 			buildConfigurationList = 14BB4E81174BC39000C75F78 /* Build configuration list for PBXProject "PEPhotoCropEditor" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -220,6 +226,7 @@
 			knownRegions = (
 				en,
 				ja,
+				"zh-Hans",
 			);
 			mainGroup = 14BB4E7D174BC39000C75F78;
 			productRefGroup = 14BB4E87174BC39000C75F78 /* Products */;
@@ -273,6 +280,7 @@
 			children = (
 				14707AEB175B9B6E00A58D40 /* en */,
 				14707AED175B9B7000A58D40 /* ja */,
+				B420217B1FE218FE00E92D38 /* zh-Hans */,
 			);
 			name = Localizable.strings;
 			sourceTree = SOURCE_ROOT;
@@ -329,7 +337,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -354,7 +362,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -365,6 +373,7 @@
 		14BB4EAD174BC39000C75F78 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = AT993V467J;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DemoApp/PEPhotoCropEditor-Prefix.pch";
 				INFOPLIST_FILE = "DemoApp/PEPhotoCropEditor-Info.plist";
@@ -376,6 +385,7 @@
 		14BB4EAE174BC39000C75F78 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = AT993V467J;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DemoApp/PEPhotoCropEditor-Prefix.pch";
 				INFOPLIST_FILE = "DemoApp/PEPhotoCropEditor-Info.plist";
